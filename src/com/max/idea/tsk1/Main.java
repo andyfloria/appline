@@ -1,30 +1,40 @@
 package com.max.idea.tsk1;
 
-public class Main{
-  public static void main (String[] args) {
+import java.util.Scanner;
 
-    // Задание №1
-    System.out.println("\"Hello World!\"");
+public class Main {
+  public static void main(String[] args) {
 
-    //Задание №2
-    double a = 7.9987;
-    byte b = 127;
+    System.out.print("Выберите проверяемую задачу: ");
+    Scanner scanner = new Scanner(System.in);
+    int task = scanner.nextInt();
 
-    //Задание №3
-      // задаём значение массива
-      int[] nums = new int[]{2, 4, 6, 8, 10};
-    System.out.println(nums[0]);
-    System.out.println(nums[4]);
-      // меняем местами первый и последний элемент
-      nums[0] = 10;
-      nums[4] = 2;
-    System.out.println(nums[0]);
-    System.out.println(nums[4]);
-      //вывод суммы первого и среднего элемента;
-    int s = nums[0] + nums[2];
-    System.out.println("Сумма первого и среднего элемента массива" +": " + s);
+    if (task == 1) {
+
+      Task1 t1 = new Task1();
+      System.out.print(Task1.task());
+    } else if (task == 2) {
+
+      Task2 t2 = new Task2();
+      System.out.print(Task2.task2());
+    } else if (task == 3) {
+
+      Task3 t3 = new Task3();
+      System.out.println(Task3.task3());
+    }
+    else if (task == 4) {
+      Task4 t4 = new Task4();
+      System.out.print(Task4.task4());
+    }
+    else if (task == 5) {
+      Task5 t5 = new Task5();
+      System.out.print(Task5.task5());
+    } else {
+      System.out.print("Выберите задачи от 1 до 5");
     }
   }
+  }
+
 
 
 
