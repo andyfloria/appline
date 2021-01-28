@@ -12,19 +12,20 @@ public class Zadanie3 {
 
     int lastNumber = nums[nums.length - 1];
     System.out.println("Последнее число массива до изменения: " + " " +lastNumber);
+
     //Смена местами первого и последнего значения массива
 
-    firstNumber = nums[nums.length -5];
-    System.out.println("Первое число массива после изменения: " + " " + firstNumber);
-    lastNumber = nums[nums.length -1];
-
+    int last2Num = nums[nums.length -1] = lastNumber;
+    System.out.println("Первое число массива после изменения: " + " " + last2Num);
+    int first2Num = nums[nums.length -5] = firstNumber;
+    System.out.println("Второе число массива после изменения: " + " " + first2Num);
 
 
     int middleNumber = nums[nums.length -3];
     System.out.println(middleNumber);
 
     //вывод суммы первого и среднего элемента;
-    int s = nums[0] + nums[2];
+    int s = last2Num + middleNumber;
     System.out.println("Сумма первого и среднего элемента массива" + ": " + s);
 }
 }
