@@ -2,27 +2,26 @@ package com.max.idea.tsk1;
 
 import java.util.Scanner;
 
-public class Task4 {
-  public static int task4 () {
+public class Zadanie4 {
+  public static void main(String[] args) {
     //Задание №4
 
     System.out.println("Введите первое число: ");
     Scanner scanner = new Scanner(System.in);
-    int a1 = scanner.nextInt();
+    double a1 = scanner.nextDouble();
     System.out.println("Введите второе число: ");
-    int b1 = scanner.nextInt();
+    double b1 = scanner.nextDouble();
     System.out.println("Введите третье число: ");
-    int c1 = scanner.nextInt();
+    double c1 = scanner.nextDouble();
 
-    int aver = (a1 + b1 + c1) / 3;
+    double aver = (a1 + b1 + c1) / 3;
     System.out.println("Среднее арифметическое =" + " " + aver);
 
-    int min_aver = aver / 2;
-    int result = Math.round(min_aver);
+    double min_aver = aver / 2;
+    double result = Math.round(min_aver);
 
-    if (result > 0 && result > 3) {
+    if (result > 3) {
       System.out.println("Программа выполнена корректно");
     }
-    return  0;
   }
 }

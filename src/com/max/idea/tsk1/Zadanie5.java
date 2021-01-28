@@ -2,13 +2,13 @@ package com.max.idea.tsk1;
 
 import java.util.Scanner;
 
-public class Task5 {
-  public static int task5 () {
+public class Zadanie5 {
+  public static void main (String[] args) {
     System.out.println("Введите первое число: ");
     Scanner scanner = new Scanner(System.in);
-    int a2 = scanner.nextInt();
+    double a2 = scanner.nextDouble();
     System.out.println("Введите второе число: ");
-    int b2 = scanner.nextInt();
+    double b2 = scanner.nextDouble();
 
     Scanner scanner1 = new Scanner(System.in);
     System.out.println("Введите математическое действие +,-,*,/: ");
@@ -25,12 +25,12 @@ public class Task5 {
         System.out.println(a2 * b2);
         break;
       case "/":
+        if (b2 == 0 || b2 == 0.00 ) {
+          System.out.println("Деление на 0 запрещено!");
+        } else
         System.out.println(a2 / b2);
         break;
       default: System.out.println("Вы ввели математическое действие неверно");
-        return 0;
     }
-    System.out.println("Успех");
-    return 0;
   }
 }
