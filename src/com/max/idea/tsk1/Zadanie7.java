@@ -22,7 +22,7 @@ public class Zadanie7 {
     System.out.println("Введите значения массива: ");
     for (int i = 0; i < size; i++) {
       aArrey[i] = scanner.nextInt();
-      System.out.println(aArrey[i]);
+      //System.out.println(aArrey[i]);
     }
     for (int values : aArrey) {
       if (values == x | values == y | values == z) {
