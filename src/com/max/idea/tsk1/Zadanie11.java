@@ -4,42 +4,44 @@ import java.util.Scanner;
 
 public class Zadanie11 {
   public static void main(String[] args) {
+
+    String x;
+
     System.out.println("Введите первое число");
     Scanner scanner = new Scanner(System.in);
-    String a = scanner.nextLine();
+    double a = scanner.nextDouble();
+
+    System.out.println("Введите второе число");
+    Scanner scannerInt = new Scanner(System.in);
+    double b = scannerInt.nextDouble();
 
     //System.out.println(a);
+    //System.out.println(b);
 
-    System.out.println("Введите первое число");
-    Scanner scannerInt = new Scanner(System.in);
-    Integer b = scannerInt.nextInt();
+    //Сохраняем в строку
+    x = Double.toString(a);
+    System.out.println("Строка: " + x);
 
-    //Перевод в Int
+    //Сохраняем в int второе
+    int z = (int) b;
+    System.out.println("Целое число: " + z);
 
-    Integer c = new Integer(a);
-
-    //Сравнение
-    boolean result;
-    result = c.equals(b);
-    System.out.println(result);
 
     //Вывод значений в консоль
-    if (c > b) {
-      System.out.println(c);
-    } else if (c < b) {
-      System.out.println(c.doubleValue());
+    if (a > b) {
+      System.out.println("Большее значение:" + a);
+    } else if (a < b) {
+      System.out.println("Меньшее значение: " + a);
     } else {
       System.out.println("Значения равны");
     }
 
-    if (c < b) {
-      System.out.println(b);
-    } else if (c > b) {
-      System.out.println(b.doubleValue());
+    if (a < b) {
+      System.out.println("Большее значение:" + b);
+    } else if (a > b) {
+      System.out.println("Меньшее значение: "+ b);
     } else {
       System.out.println("Значения равны");
     }
-
-
   }
 }
