@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 // Итоговая задача №4
 
-public class Zadanie_1_1 {
+public class Zadanie_1_4 {
   public static void main(String[] args) {
     System.out.println("Отгадай загадку: \n \"Сидит дед,\n во сто шуб одет,\n кто его раздевает,\n тот слезы проливает\" \n\n Вам дано 3 попытки. \n\n Если нужна подсказка введите \"Подсказка\"");
 // Вводим переменные для ответа и подсказки
