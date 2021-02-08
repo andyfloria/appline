@@ -3,12 +3,13 @@ package com.max.idea.tsk1;
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Zadanie13 {
   public static void main(String[] args) {
-    // Массив с латинскими буквами
-    String[] ch = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
+    // Переменные для проверки рег. выражений
     boolean s;
+    boolean d;
     // Переменная для счетчика
     int count_int = 0;
 
@@ -17,20 +18,20 @@ public class Zadanie13 {
     String a = input.nextLine();
 
     //Создаём массив и делим его по пробелами определяя слова
-    String eng[] = a.split(" ");//split("");
-    int wordNumb = eng.length;
+    String eng[] = a.split("\\s");
+
     //Заполяем массив словами
     for (String word : eng) {
-      for (String word_ch : ch) {
-        //Сравниваем слова с массивом латинских букв
-          s = word.contains(word_ch);
-          if (s == true) {
-            count_int++;
-            System.out.println(word);
-            break;
-          }
-          }
-        } System.out.println("Количество слов: " + count_int);
+
+      d = word.matches("^[a-zA-Z]*");
+      s = word.matches("^[а-я]*");
+      //if (s != true & d==true) {
+        if (d==true && !s) {
+        System.out.println(word);
+        count_int++;
       }
-    }
+    } System.out.println("Количество слов: " + count_int);
+  }
+}
+
 
