@@ -47,7 +47,7 @@ public class Zadanie_1_3 {
       }
     }
     if (out.size() == 0) { //если повторов не было выводим надпись
-      System.out.println("Вы строки, в которых нет повторов");
+      System.out.println("Вы строки, в которых нет повторов или во всех словах есть повторы");
     } else if (out.size() > 0) { //выводим первое слово
       for (int z = 0; z == 0; z++) {
         System.out.println(out.get(z).toString());
