@@ -15,6 +15,9 @@ public class Zadanie_1_3 {
 
 //Лист для записи слов
     ArrayList<String> out = new ArrayList<>();
+    ArrayList<String> outFull = new ArrayList<>();
+    ArrayList<Integer> countNumber = new ArrayList<>();
+
 //Цикл ввода слов
     for (int p = 1; p < a; p++) {
 
@@ -35,22 +38,34 @@ public class Zadanie_1_3 {
         }
       }
       ArrayList<Integer> key = new ArrayList<>(CharMap.values()); //записываем в список значения повторов букв
-      //System.out.println(key);
+      //System.out.println("Ключи" + key);
       for (int number : key) {
+        int pos = 1;
+        Boolean u;
         if (number > 1) { //проверяем если букв больше чем 1 увеличиваем счетчик
           count++;
+          //System.out.println("КЛЮЧ В ЦИКЛЕ" + number);
+        } else if (number == 1) {
+          count = 1;
         }
-      }
+      } //System.out.println("Счетчик = " + count);
+
       if (count == 1) { //проверяем если букв не больше 1 записываем в список слово
         out.add(strings);
-        //System.out.println(out);
+        //System.out.println("Массив аут: " + out);
+      } else if (count > 1) {
+        outFull.add(strings);
+        //System.out.println("Массив аутФУЛ: " + outFull);
       }
     }
-    if (out.size() == 0) { //если повторов не было выводим надпись
-      System.out.println("Вы строки, в которых нет повторов или во всех словах есть повторы");
-    } else if (out.size() > 0) { //выводим первое слово
+    //System.out.println(countNumber);
+    if (out.size() > 0) { //выводим первое слово
       for (int z = 0; z == 0; z++) {
         System.out.println(out.get(z).toString());
+      }
+    } else  {
+      for (int o = 0; o == 0; o++) {
+        System.out.println(outFull.get(o).toString());
       }
     }
   }
