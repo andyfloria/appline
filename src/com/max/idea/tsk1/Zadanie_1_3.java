@@ -38,37 +38,30 @@ public class Zadanie_1_3 {
         }
       }
       ArrayList<Integer> key = new ArrayList<>(CharMap.values()); //записываем в список значения повторов букв
-      //System.out.println("Ключи" + key);
+      Collections.sort(key, Collections.reverseOrder()); // сортируем список по обываю, чтобы при первой итерации списка в цикле увидеть, что есть повтор
+
       for (int number : key) {
-        int pos = 1;
-        Boolean u;
+
         if (number > 1) { //проверяем если букв больше чем 1 увеличиваем счетчик
           count++;
-          //System.out.println("КЛЮЧ В ЦИКЛЕ" + number);
+          outFull.add(strings);
+          break;
         } else if (number == 1) {
-          count = 1;
+          out.add(strings);
         }
-      } //System.out.println("Счетчик = " + count);
-
-      if (count == 1) { //проверяем если букв не больше 1 записываем в список слово
-        out.add(strings);
-        //System.out.println("Массив аут: " + out);
-      } else if (count > 1) {
-        outFull.add(strings);
-        //System.out.println("Массив аутФУЛ: " + outFull);
       }
     }
-    //System.out.println(countNumber);
-    if (out.size() > 0) { //выводим первое слово
-      for (int z = 0; z == 0; z++) {
-        System.out.println(out.get(z).toString());
-      }
-    } else  {
-      for (int o = 0; o == 0; o++) {
-        System.out.println(outFull.get(o).toString());
+      if (out.size() > 0) { //говорим, что если есть слово без повторов и оно не одно выводим первое
+        for (int z = 0; z == 0; z++) {
+          System.out.println(out.get(z).toString());
+        }
+      } else {
+        for (int o = 0; o == 0; o++) { //говорим, что если есть слова с повторами и оно не одно выводим первое
+          System.out.println(outFull.get(o).toString());
+        }
       }
     }
   }
-}
+
 
 
