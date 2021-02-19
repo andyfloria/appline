@@ -51,6 +51,9 @@ public class Zadanie_1_3 {
         }
       }
     }
+
+    Collections.sort(outFull); //сортируем список с повторами, чтобы вывести слово с наименьгим кол-вом
+
       if (out.size() > 0) { //говорим, что если есть слово без повторов и оно не одно выводим первое
         for (int z = 0; z == 0; z++) {
           System.out.println(out.get(z).toString());
