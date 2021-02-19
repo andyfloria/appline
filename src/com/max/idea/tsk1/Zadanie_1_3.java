@@ -56,11 +56,11 @@ public class Zadanie_1_3 {
 
       if (out.size() > 0) { //говорим, что если есть слово без повторов и оно не одно выводим первое
         for (int z = 0; z == 0; z++) {
-          System.out.println(out.get(z).toString());
+          System.out.println("Ответ: " + out.get(z).toString());
         }
       } else {
         for (int o = 0; o == 0; o++) { //говорим, что если есть слова с повторами и оно не одно выводим первое
-          System.out.println(outFull.get(o).toString());
+          System.out.println("Ответ: " + outFull.get(o).toString());
         }
       }
     }
