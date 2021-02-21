@@ -11,13 +11,13 @@ public class Zadanie_1_3 {
 // Переменная для корректного отображения № строк
     int a = 1 + string_value;
     // Переменная для счетчика
-    int count = 1;
+    int count = 0;
 
 //Лист для записи слов
     ArrayList<String> out = new ArrayList<>();
     ArrayList<String> outFull = new ArrayList<>();
     ArrayList<Integer> countNumber = new ArrayList<>();
-
+    Map<String, Integer> StMap = new HashMap<>();
 //Цикл ввода слов
     for (int p = 1; p < a; p++) {
 
@@ -26,6 +26,7 @@ public class Zadanie_1_3 {
       String strings = scanner_string.nextLine();
 //Таблица ключ-значение - для подсчета количества символов в строке
       Map<Character, Integer> CharMap = new HashMap();
+
 
       char[] arr = strings.toLowerCase().toCharArray(); //переводим строку в символы
       for (char value : arr) {
@@ -37,34 +38,26 @@ public class Zadanie_1_3 {
           }
         }
       }
-      ArrayList<Integer> key = new ArrayList<>(CharMap.values()); //записываем в список значения повторов букв
-      Collections.sort(key, Collections.reverseOrder()); // сортируем список по обываю, чтобы при первой итерации списка в цикле увидеть, что есть повтор
 
-      for (int number : key) {
+      //System.out.println(CharMap);
 
-        if (number > 1) { //проверяем если букв больше чем 1 увеличиваем счетчик
-          count++;
-          outFull.add(strings);
-          break;
-        } else if (number == 1) {
-          out.add(strings);
-        }
-      }
+      ArrayList<Integer> key = new ArrayList<>(CharMap.values());//записываем ключи
+      //System.out.println(key);
+      int e = Collections.frequency(key, 1); //ищем количество ключей = 1, т.е. без повторов в слове
+
+      StMap.put(strings, e); //записываем в таблицу
+      //System.out.println(StMap);
     }
 
-    Collections.sort(outFull); //сортируем список с повторами, чтобы вывести слово с наименьшим кол-вом
+      String maxK; //переменная для выводам слова с макс. кол-ом символов без повторов
+      maxK = Collections.max(StMap.entrySet(), Map.Entry.comparingByValue()).getKey(); //ищем ключ с максимальным значением
+      System.out.println(maxK);
 
-      if (out.size() > 0) { //говорим, что если есть слово без повторов и оно не одно выводим первое
-        for (int z = 0; z == 0; z++) {
-          System.out.println("Ответ: " + out.get(z).toString());
-        }
-      } else {
-        for (int o = 0; o == 0; o++) { //говорим, что если есть слова с повторами и оно не одно выводим первое
-          System.out.println("Ответ: " + outFull.get(o).toString());
-        }
-      }
     }
   }
+
+
+
 
 
 
